@@ -1,0 +1,118 @@
+/* --- Archivo: index.css (mejorado) --- */
+
+:root {
+  --bg: #242424; /* color solicitado: mantener */
+  --text: #f5f5f5;
+  --muted: #bdbdbd;
+  --max-width: 1200px;
+  --gutter: 1rem;
+  --radius: 8px;
+}
+
+/* Reset mínimo y box-sizing coherente */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+/* Body: sin display:flex para evitar efectos inesperados globales,
+   pero con buenos valores por defecto y el color de fondo mantenido */
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Contenedor principal centrado y responsivo:
+   usa <div class="page"> y dentro <div class="container"> para el contenido */
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: calc(var(--gutter) * 2);
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: calc(var(--gutter) * 1.5);
+}
+
+/* Tipografía y elementos comunes */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 0.5rem 0;
+  color: inherit;
+  font-weight: 600;
+}
+
+p {
+  margin: 0 0 1rem 0;
+  color: var(--muted);
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+a:focus {
+  outline: 2px solid rgba(255,255,255,0.12);
+  outline-offset: 2px;
+}
+
+/* Imágenes y medios */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius);
+}
+
+/* Accesibilidad */
+:focus {
+  outline: 2px solid rgba(255,255,255,0.12);
+  outline-offset: 3px;
+}
+
+.sr-only {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Preferencias de movimiento */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Utilidades ligeras */
+.row { display: flex; gap: var(--gutter); flex-wrap: wrap; }
+.col { flex: 1 1 0; min-width: 0; }
+
+/* Nota: si antes estabas usando display:flex en body para centrar,
+   ahora usa .page para no romper el resto del layout global. */

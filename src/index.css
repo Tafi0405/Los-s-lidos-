@@ -1,7 +1,5 @@
-/* --- Archivo: index.css (mejorado) --- */
-
 :root {
-  --bg: #242424; /* color solicitado: mantener */
+  --bg: #242424;
   --text: #f5f5f5;
   --muted: #bdbdbd;
   --max-width: 1200px;
@@ -9,7 +7,6 @@
   --radius: 8px;
 }
 
-/* Reset mínimo y box-sizing coherente */
 *,
 *::before,
 *::after {
@@ -20,8 +17,6 @@ html, body {
   height: 100%;
 }
 
-/* Body: sin display:flex para evitar efectos inesperados globales,
-   pero con buenos valores por defecto y el color de fondo mantenido */
 body {
   margin: 0;
   min-width: 320px;
@@ -35,8 +30,6 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
-/* Contenedor principal centrado y responsivo:
-   usa <div class="page"> y dentro <div class="container"> para el contenido */
 .page {
   min-height: 100vh;
   display: flex;
@@ -53,7 +46,6 @@ body {
   padding: calc(var(--gutter) * 1.5);
 }
 
-/* Tipografía y elementos comunes */
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 0.5rem 0;
   color: inherit;
@@ -74,7 +66,6 @@ a:focus {
   outline-offset: 2px;
 }
 
-/* Imágenes y medios */
 img, video {
   max-width: 100%;
   height: auto;
@@ -82,7 +73,6 @@ img, video {
   border-radius: var(--radius);
 }
 
-/* Accesibilidad */
 :focus {
   outline: 2px solid rgba(255,255,255,0.12);
   outline-offset: 3px;
@@ -100,7 +90,6 @@ img, video {
   border: 0;
 }
 
-/* Preferencias de movimiento */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.001ms !important;
@@ -110,9 +99,5 @@ img, video {
   }
 }
 
-/* Utilidades ligeras */
 .row { display: flex; gap: var(--gutter); flex-wrap: wrap; }
 .col { flex: 1 1 0; min-width: 0; }
-
-/* Nota: si antes estabas usando display:flex en body para centrar,
-   ahora usa .page para no romper el resto del layout global. */

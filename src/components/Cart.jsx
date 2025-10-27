@@ -19,7 +19,7 @@ function Cart({ cart, removeFromCart, clearCart, handleCheckout }) {
             {cart.map((item) => (
               <li key={item.id}>
                 {item.name} x{item.quantity} - ${item.price * item.quantity}
-                <button onClick={() => removeFromCart(item.id)}>❌</button>
+                <button onClick={() => removeFromCart(item.id)}>X</button>
               </li>
             ))}
           </ul>

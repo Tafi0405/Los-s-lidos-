@@ -1,13 +1,12 @@
-/* Agrega o modifica estos estilos en tu Cart.css */
 .checkout-btn {
   width: 100%;
-  background-color: #007bff; /* Azul sólido para la acción principal */
+  background-color: #007bff;
   color: white;
   border: none;
   padding: 0.7rem;
   cursor: pointer;
   border-radius: 5px;
-  margin-top: 1.5rem; /* Separación del Vaciar Carrito */
+  margin-top: 1.5rem;
   font-weight: bold;
 }
 
@@ -15,8 +14,6 @@
   background-color: #0056b3;
 }
 
-/* Asegúrate de que el clear-btn esté debajo */
 .clear-btn {
-  /* ... tus estilos existentes para Vaciar Carrito ... */
   margin-top: 0.5rem; 
 }

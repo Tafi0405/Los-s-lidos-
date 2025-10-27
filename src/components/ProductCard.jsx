@@ -4,7 +4,10 @@ import "./ProductCard.css"
 function ProductCard({ product, addToCart }) {
   return (
     <div className="product-card">
-      <img src={product.image} alt={product.name} />
+      <div className="image-container">
+          <img src={product.image} alt={product.name} />
+      </div>
+      
       <h3>{product.name}</h3>
       <p>{product.description}</p>
       <span>${product.price}</span>

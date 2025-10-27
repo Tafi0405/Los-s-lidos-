@@ -2,17 +2,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh; /* Altura para centrarlo verticalmente en la pantalla */
+  height: 80vh;
   text-align: center;
 }
 
-/* --- Estilos del Spinner de Carga --- */
 .spinner {
   border: 4px solid rgba(0, 0, 0, 0.1);
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border-left-color: #007bff; /* Color sólido para el spinner */
+  border-left-color: #007bff;
   animation: spin 1s ease infinite;
   margin: 20px auto;
 }
@@ -26,9 +25,8 @@
   }
 }
 
-/* --- Estilos del Botón de Retorno y Éxito --- */
 .success-state h1 {
-  color: #28a745; /* Verde para el éxito */
+  color: #28a745;
   font-size: 2.5em;
   margin-bottom: 0.5em;
 }

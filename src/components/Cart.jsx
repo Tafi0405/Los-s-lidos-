@@ -1,7 +1,6 @@
 import React from "react";
 import "./Cart.css";
 
-// Recibe la nueva prop: handleCheckout
 function Cart({ cart, removeFromCart, clearCart, handleCheckout }) { 
   const total = cart.reduce(
     (acc, item) => acc + item.price * item.quantity,
